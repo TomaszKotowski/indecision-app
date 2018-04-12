@@ -5,7 +5,7 @@ class Counter extends React.Component {
         this.handelMinusOne = this.handelMinusOne.bind(this);
         this.handelReset = this.handelReset.bind(this);
         this.state = {
-            count: 0,
+            count: props.count
         };
     }
     handelAddOne() {
@@ -39,6 +39,10 @@ class Counter extends React.Component {
             </div>
         );
     }
+}
+
+Counter.defaultProps = {
+    count: 0
 }
 
 
