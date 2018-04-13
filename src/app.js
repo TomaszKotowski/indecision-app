@@ -6,7 +6,7 @@ class IndesicionApp extends React.Component {
         this.handleAddOption = this.handleAddOption.bind(this);
         this.handleDeleteOption = this.handleDeleteOption.bind(this);
         this.state = {
-            options: props.options
+            options: []
         };
     }
     componentDidMount() {
@@ -19,8 +19,6 @@ class IndesicionApp extends React.Component {
         } catch (error) {
             //Do nothing
         }
-
-
     }
     componentDidUpdate(prevProps, prevState) {
         if (prevState.options.length !== this.state.options.length) {
@@ -72,9 +70,6 @@ class IndesicionApp extends React.Component {
         );
     }
 }
-IndesicionApp.defaultProps = {
-    options: []
-};
 const Header = (props) => {
     return (
         <div>
